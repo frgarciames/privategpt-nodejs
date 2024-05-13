@@ -1,0 +1,17 @@
+{
+  "name": "privategpt-node-test",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "node index.mjs",
+    "dev:ts": "node-ts index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "privategpt-sdk-node": "^0.1.2",
+    "ts-node": "^10.9.2"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
