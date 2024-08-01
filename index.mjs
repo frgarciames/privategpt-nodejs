@@ -112,6 +112,35 @@ async function start() {
   console.log("\n>Deletion of ingested document");
   await client.ingestion.deleteIngested(ingested_file_doc_id);
   console.log("\nDeletion done");
+
+  // Recipes
+
+  // console.log("Sync summarize");
+  // console.log(
+  //   (
+  //     await client.recipes.summarize.summarize({
+  //       text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. " +
+  //         "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, " +
+  //         "when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
+  //       instructions: "Summarize the text to 1 sentence.",
+  //     })
+  //   ).summary
+  // );
+
+  // // // Streaming summarize
+  // console.log("\n>Streaming summarize:");
+  // const summarizeStream = await client.recipes.summarize.summarizeStream({
+  //   text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. " +
+  //         "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, " +
+  //         "when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
+  //   instructions: "Summarize the text to 1 sentence.",
+  // });
+  // for await (const chunk of summarizeStream) {
+  //   // Print  content in an incremental way
+  //   if (chunk) {
+  //     console.log("content:", chunk?.choices[0]?.delta?.content);
+  //   }
+  // }
 }
 
 start();
